@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import Logout from '../auth/Logout.js';
 import { Link } from 'react-router-dom';
 
 class Nav extends Component {
   render(){
     let links = <span />;
-    if(this.props.user){
+
       links = (
         <span>
-          <Link to="/profile">Profile</Link>
-          <Logout updateUser={this.props.updateUser} />
+          <Link to="/stresses">Stresses</Link>
+          <Link to="/muses">Muses</Link>
         </span>);
-    }
-    else {
-      links = (
-        <span>
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </span>);
-    }
+
 
     return(
         <div>
@@ -28,7 +20,6 @@ class Nav extends Component {
             {links}
           </nav>
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Welcome to MERN Stack Boilerplate!</h1>
           </header>
         </div>

@@ -9,6 +9,8 @@ import Nav from './layout/Nav.js';
 import Login from './auth/Login.js';
 import Profile from './Profile.js';
 import Signup from './auth/Signup.js';
+import Stresses from './Stresses.js';
+import Muses from './Muses.js';
 
 class App extends Component {
   constructor(props){
@@ -76,6 +78,12 @@ class App extends Component {
             <div className="space">
               <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />
               <Route exact path="/" component={Home} />
+              <Route path ="/muses" component={
+                () => (<Muses />)
+              }/>              
+              <Route path ="/stresses" component={
+                () => (<Stresses />)
+              }/>
               <Route path="/login" component={
                 () => (<Login user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
               <Route path="/signup" component={
