@@ -1,28 +1,34 @@
-var db = require('.models')
+var Muses = require('./models/muses')
 
 var muse_list = [
   {
-    videoUrl: 'wwwwwwww'
+    videoUrl: 'wwwwwwww',
+    memeUrl: 'wwwww'
   },
   {
-    videoUrl: 'xxxxxx'
+    videoUrl: 'xxxxxx',
+    memeUrl: 'xxxxx'
   },
   {
-    videoUrl: 'ttttt'
+    videoUrl: 'ttttt',
+    memeUrl: 'tttttt'
   },
   {
-    videoUrl: 'bbbbbb'
+    videoUrl: 'bbbbbb',
+    memeUrl: 'bbbbb'
   },
   {
-    videoUrl: 'qqqqqqq'
+    videoUrl: 'qqqqqqq',
+    memeUrl: 'qqqqq'
   },
   {
-    videoUrl: 'eeeeeee'
+    videoUrl: 'eeeeeee',
+    memeUrl: 'eeeee'
   },
 ];
 
 
-db.Muses.videos.create(muse_list, function(err, vids){
+Muses.create(muse_list, function(err, vids){
   if (err) { return console.log('err', err); }
   console.log('created seedsss ', vids.length, " vid seeds that is" );
   process.exit();

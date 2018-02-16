@@ -1,12 +1,8 @@
 var mongoose = require('mongoose');
 
 var museSchema = new mongoose.Schema({
-	videos: [{
-				videoUrl: String,
-			}],
-	memes: [{
-						memeUrl:String,
-					}],
+	videoUrl: String,
+	memeUrl:String
 });
 
 var Muses = mongoose.model('Muses', museSchema);

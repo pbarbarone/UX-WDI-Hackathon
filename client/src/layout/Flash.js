@@ -17,7 +17,7 @@ class Flash extends Component {
         </div>);
     }
     else {
-      return (<div className="no-flash">No Flash</div>);
+      return (<div></div>);
     }
   }
 }
